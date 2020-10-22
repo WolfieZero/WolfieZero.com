@@ -1,6 +1,7 @@
 ---
 title: 'About'
 slug: about
+date: 2020/10/22 21:09
 ---
 
 Another software engineer that does JavaScript development... yes, indeed. But I'm more than that.

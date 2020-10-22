@@ -9,9 +9,9 @@ export interface Content {
   body: string;
   slug: string;
   path: string;
+  date: string;
 
   blurb?: string;
-  date?: string;
   excerpt?: string;
   metaLink?: string;
   type?: string;
