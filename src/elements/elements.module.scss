@@ -1,0 +1,12 @@
+@import 'src/styles/library.scss';
+
+.Section {
+  @include container;
+
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.Container {
+  @include container;
+}

@@ -1,0 +1,11 @@
+import React from 'react';
+
+import styles from './{{ kebabCase componentName }}.module.scss';
+
+interface {{ pascalCase componentName }}Props {
+  children: React.ReactNode;
+}
+
+export const {{ pascalCase componentName }}: React.FunctionComponent<{{ pascalCase componentName }}Props> = ({ children }) => {
+  return <>{children}</>;
+};

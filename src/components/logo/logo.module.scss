@@ -1,0 +1,27 @@
+@import 'src/styles/library.scss';
+
+.Logo {
+  display: flex;
+  align-items: center;
+
+  &__star {
+    margin-right: rem(10px);
+  }
+
+  &__text {
+    width: 200px;
+  }
+}
+
+.LogoStar {
+  @include size(3.5rem);
+}
+
+.LogoText {
+  @include type-branding;
+
+  color: $color-white;
+  text-transform: lowercase;
+  font-size: 2rem;
+  line-height: 80%;
+}

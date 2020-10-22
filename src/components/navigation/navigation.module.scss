@@ -1,0 +1,107 @@
+@import '../../styles/library.scss';
+
+.Navigation {
+  @include type-branding;
+  @include font-size-height(1.35rem, 32px);
+  width: 100%;
+  text-transform: lowercase;
+  text-align: right;
+
+  ul {
+    @include list-basic;
+    font-size: 1.3rem;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($color-black, 0.5);
+    margin: 0;
+  }
+
+  a {
+    border-bottom: 1px solid rgba($color-white, 0.25);
+    color: $color-white;
+
+    &:hover {
+      border-bottom: 1px solid rgba($base-link-color, 0.75);
+    }
+  }
+
+  @media ($media-display-is-medium) {
+    ul {
+      @include list-inline;
+      position: relative;
+      justify-content: flex-end;
+      background: transparent;
+      backdrop-filter: none;
+      flex-direction: row;
+    }
+
+    li {
+      margin-left: 1em;
+    }
+  }
+}
+
+.NavClose {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  a {
+    border: 0;
+  }
+}
+
+.NavTrigger {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  &:target + ul {
+    display: flex;
+  }
+}
+
+.NavIcon {
+  background: $color-white;
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: rem(35px);
+
+  &::before,
+  &::after {
+    background: $color-white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+  }
+
+  &::before {
+    top: rem(10px);
+  }
+
+  &::after {
+    top: rem(-10px);
+  }
+}
+
+@media ($media-display-is-medium) {
+  .NavClose,
+  .NavTrigger,
+  .NavIcon {
+    display: none;
+  }
+}

@@ -1,0 +1,72 @@
+@import 'src/styles/library.scss';
+
+.List {
+  @include list-basic;
+
+  li {
+    margin-top: rem(50px);
+    margin-bottom: rem(50px);
+  }
+}
+
+.ListItem {
+  position: relative;
+
+  h2 {
+    @include font-size-height(1.7rem, 1em);
+    margin-bottom: 0.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba($color-brand-constrast, 0.25);
+  }
+
+  p:last-child {
+    text-align: right;
+  }
+
+  a {
+    color: inherit;
+    text-transform: lowercase;
+
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   top: 0;
+    //   bottom: 0;
+    //   left: 0;
+    //   right: 0;
+    // }
+
+    // &:hover {
+    //   background: rg;
+    // }
+  }
+}
+
+.SingleHeader {
+  p,
+  h1 {
+    @include container;
+  }
+  h1 {
+    padding-top: 7.5rem;
+  }
+  p {
+    padding-bottom: 1rem;
+  }
+
+  &__title {
+    border-bottom: 1px solid $color-brand;
+    font-size: 4rem;
+    margin-top: 1em;
+    text-align: center;
+  }
+}
+
+.SingleMeta {
+  font-size: 0.8rem;
+  opacity: 0.25;
+}
+
+.SingleContent {
+  max-width: 60ch;
+}

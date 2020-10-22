@@ -1,0 +1,35 @@
+{
+  "syntax": "scss",
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-prettier/recommended"
+  ],
+  "rules": {
+    "no-descending-specificity": null,
+    "at-rule-no-unknown": null,
+    "property-no-unknown": [
+      true, {
+        "ignoreProperties": [
+          "lost-column",
+          "lost-offset"
+        ]
+      }
+    ],
+    "at-rule-empty-line-before": null,
+    "block-opening-brace-space-before": "always",
+    "block-closing-brace-newline-after": [
+      "always", {
+        "ignoreAtRules": [ "if", "else" ]
+      }
+    ],
+    "scss/at-else-closing-brace-newline-after": "always-last-in-chain",
+    "scss/at-else-closing-brace-space-after": "always-intermediate",
+    "scss/at-else-empty-line-before": "never",
+    "scss/at-if-closing-brace-newline-after": "always-last-in-chain",
+    "scss/at-if-closing-brace-space-after": "always-intermediate",
+    "declaration-empty-line-before": null
+  }
+}

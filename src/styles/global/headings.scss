@@ -1,0 +1,43 @@
+// =============================================================================
+// Headings
+// =============================================================================
+
+$typography-size-h1: 2rem !default;
+$typography-size-h2: 1.75rem !default;
+$typography-size-h3: 1.5rem !default;
+$typography-size-h4: 1.25rem !default;
+$typography-size-h5: 1rem !default;
+$typography-size-h6: 0.75rem !default;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include type-heading;
+}
+
+h1 {
+  font-size: $typography-size-h1;
+}
+
+h2 {
+  font-size: $typography-size-h2;
+}
+
+h3 {
+  font-size: $typography-size-h3;
+}
+
+h4 {
+  font-size: $typography-size-h4;
+}
+
+h5 {
+  font-size: $typography-size-h5;
+}
+
+h6 {
+  font-size: $typography-size-h6;
+}

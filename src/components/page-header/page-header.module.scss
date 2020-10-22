@@ -1,0 +1,12 @@
+@import 'src/styles/library.scss';
+
+.PageHeader {
+  padding-top: $size-header-height + 50px;
+
+  h1 {
+    background: $color-brand;
+    display: inline-block;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}

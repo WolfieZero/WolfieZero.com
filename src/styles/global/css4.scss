@@ -1,0 +1,12 @@
+:root {
+  --base-font-color: #{$base-font-color};
+  --base-font-subtle-color: #{$base-font-subtle-color};
+  --base-background-color: #{$base-background-color};
+  --base-link-color: #{$color-pink};
+
+  @media ($media-is-dark) {
+    --base-font-color: #{$color-white};
+    --base-font-subtle-color: #{$color-black-contrast};
+    --base-background-color: #{$color-black};
+  }
+}

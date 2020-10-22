@@ -1,0 +1,34 @@
+@import 'src/styles/library.scss';
+
+.AssetGroup {
+  text-align: center;
+
+  .Asset {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+}
+
+.Asset {
+  border: 0.25rem solid transparent;
+  border-radius: 100%;
+  display: inline-block;
+  fill: $color-white;
+  width: 5rem;
+  height: 5rem;
+}
+
+.AssetLink {
+  border: 0;
+  line-height: 1em;
+  display: inline-block;
+
+  &:hover,
+  &:focus {
+    box-shadow: none;
+
+    .Asset {
+      border-color: $base-link-color;
+    }
+  }
+}

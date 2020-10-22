@@ -1,0 +1,32 @@
+@import 'src/styles/library.scss';
+
+.Button {
+  background: $color-brand;
+  border: 1px solid transparent;
+  color: $color-white;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+
+  @include hocus {
+    background: transparent;
+    border-color: $color-brand;
+    color: $color-white;
+  }
+
+  &__m_majority {
+    max-width: 75%;
+  }
+
+  &__m_half {
+    max-width: 50%;
+  }
+
+  &__m_some {
+    max-width: 25%;
+  }
+}
+
+.ButtonGroup {
+  text-align: center;
+}

@@ -1,0 +1,60 @@
+@import './rem.scss';
+
+$grid-debug-color: rgba($debug-color, 0.25) !default;
+$grid-debug: false;
+
+@function _grid-size-calculate($columns: $grid-columns) {
+  $gutters: $columns - 1;
+  @if $gutters == 0 {
+    $gutters: 1;
+  }
+  $gutter-size: $gutters * $grid-gutter-width;
+  $column-size: $columns * $grid-column-width;
+  $total-size: $column-size + $gutter-size;
+  @return rem($total-size);
+  // @return $total-size;
+}
+
+@mixin grid-cell($columns) {
+  max-width: _grid-size-calculate($columns);
+  // max-width: 100%;
+}
+
+@mixin grid-offset($columns) {
+  margin-left: _grid-size-calculate($columns);
+}
+
+@mixin grid-right-push($columns) {
+  margin-right: _grid-size-calculate($columns);
+}
+
+@mixin grid-view {
+  @if $grid-debug {
+    & {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin-right: auto;
+        margin-left: auto;
+        width: _grid-size-calculate();
+        min-height: 100vh;
+        content: '';
+        background-image: repeating-linear-gradient(
+          to right,
+          $grid-debug-color,
+          $grid-debug-color calc((100% / #{$grid-columns}) - #{$grid-gutter-width}),
+          transparent $grid-column-width,
+          transparent calc(100% / #{$grid-columns})
+        );
+        background-size: calc(100% + #{rem($grid-gutter-width)}) 100%;
+        z-index: 1000;
+        pointer-events: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@import 'src/styles/library.scss';
+
+.Layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow-x: hidden;
+
+  > main {
+    flex: 1 0 auto;
+  }
+
+  > footer {
+    flex-shrink: 0;
+  }
+}
+
+.Header {
+  @include container;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: rem($size-header-height);
+  display: flex;
+  align-items: center;
+  z-index: 2;
+
+  &__link {
+    @include hocus {
+      border-bottom: transparent;
+
+      path {
+        fill: $color-white;
+      }
+    }
+  }
+}
+
+.Footer {
+  @include type-branding;
+  font-size: 1rem;
+
+  color: $color-white;
+  text-transform: lowercase;
+  // background-color: $color-brand;
+  position: relative;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__logo {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: block;
+    z-index: 0;
+
+    path {
+      fill: rgba($color-brand, 0.1);
+      // fill: rgba(#000, 0.1);
+    }
+  }
+
+  p {
+    @include container;
+    text-align: center;
+    position: relative;
+  }
+
+  a {
+    border-bottom: 1px solid rgba($color-white, 0.25);
+    color: $color-white;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+
+    &:hover {
+      border-bottom: 1px solid rgba($base-link-color, 0.75);
+    }
+  }
+}

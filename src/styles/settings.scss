@@ -1,0 +1,75 @@
+// Typography
+// =========================================================
+
+$typography-brand: 'Exo';
+$typography-family-base: -apple-system, system-ui, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue',
+  'sans-serif';
+$typography-family-heading: $typography-brand, $typography-family-base;
+$typography-family-code: monospace;
+
+$typography-size-base: 22px;
+$typography-size-line: $typography-size-base * 1.75;
+
+$typography-size-h1: 2rem;
+$typography-size-h2: 1.75rem;
+$typography-size-h3: 24px;
+$typography-size-h4: 20px;
+$typography-size-h5: 18px;
+$typography-size-h6: 16px;
+
+$typography-weight-light: 100;
+$typography-weight-normal: 300;
+$typography-weight-bold: 700;
+
+// Layout
+// =========================================================
+
+$site-max-width: 60rem;
+$site-width: 90%;
+
+$media-display-is-big: 'width > #{$site-max-width}';
+$media-display-is-medium: 'width > 46rem';
+$media-is-dark: 'prefers-color-scheme: dark';
+$media-is-bigger-than-content: 'width > 80ch';
+
+$grid-debug: true;
+$grid-columns: 6;
+$grid-column-width: 130px;
+$grid-gutter-width: 20px;
+
+$container: (
+  default: (
+    margin-left: auto,
+    margin-right: auto,
+    width: 80%,
+  ),
+  medium: (
+    width: 880px,
+  ),
+);
+
+// Raw Colors
+// =========================================================
+
+$color-black: #171717;
+$color-black-contrast: #282828;
+$color-white: #fefefe;
+$color-white-contrast: #f0f0f0;
+$color-pink: #f6f;
+$color-brand: #831c85;
+$color-brand-constrast: #831c85;
+
+// Base
+// =========================================================
+
+$base-font-color: $color-black;
+$base-font-subtle-color: $color-white-contrast;
+$base-background-color: $color-white;
+$base-link-color: $color-pink;
+
+$debug-color: $color-pink;
+
+// Site
+// =========================================================
+
+$size-header-height: 120px;

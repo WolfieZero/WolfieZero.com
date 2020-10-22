@@ -1,0 +1,17 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": true,
+  "eslint.codeActionsOnSave.mode": "all",
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "jest.pathToJest": "npm test --",
+  "typescript.format.enable": false,
+  "[handlebars]": {
+    "editor.suggest.insertMode": "replace",
+    "editor.formatOnSave": false
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

@@ -1,0 +1,133 @@
+@import './rem.scss';
+
+@mixin type-branding {
+  font-family: $typography-family-heading;
+  font-weight: 200;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin type-heading {
+  @include type-branding;
+}
+
+@mixin type-base {
+  -webkit-font-smoothing: antialiased;
+  font-family: $typography-family-base;
+  font-weight: $typography-weight-normal;
+  text-rendering: optimizeSpeed;
+}
+
+@mixin font-size-height($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+// @mixin font-size($font-size, $line-height: '') {
+//   font-size: rem($font-size);
+
+//   @if $line-height == '' {
+//     // line-height: ceil($font-size / $typography-size-line) * ($typography-size-line / $font-size) + rem;
+//   } @else {
+//     @if (type-of($line-height) == number or $line-height == inherit or $line-height == normal) {
+//       line-height: $line-height;
+//     } @else if ($line-height != none and $line-height != false) {
+//       @warn 'Warning: "#{$line-height}" is not a valid value for `line-height`.';
+//     }
+//   }
+// }
+
+@mixin font-weight($weight) {
+  @if ($weight == normal) {
+    font-weight: $typography-weight-normal;
+  } @else if ($weight == bold) {
+    font-weight: $typography-weight-bold;
+  } @else if ($weight == light) {
+    font-weight: $typography-weight-light;
+  } @else {
+    @warn "#{$weight} is not a valid font-weight.";
+  }
+}
+
+@mixin truncate($width: 100%, $overflow: ellipsis) {
+  max-width: $width;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(
+          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
+            ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+        );
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+@mixin header-formatting {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @content;
+  }
+}
+
+@mixin body-formatting {
+  p {
+    @content;
+  }
+}
+
+@mixin list-formatting {
+  li,
+  dt,
+  dd {
+    @content;
+  }
+}
+
+@mixin all-formatting {
+  // header
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  // body
+  p,
+  // list
+  li,
+  dt,
+  dd {
+    @content;
+  }
+}
+
+@mixin readable {
+  @include body-formatting {
+    margin-bottom: 1.5rem;
+  }
+}

@@ -1,0 +1,115 @@
+// =============================================================================
+// Reset
+// =============================================================================
+
+// Remove borders, margin and padding
+// =============================================================================
+
+@mixin reset-to-0 {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+// Headers
+// -------------------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include reset-to-0;
+}
+
+// Text
+// -------------------------------------
+
+p,
+blockquote {
+  @include reset-to-0;
+}
+
+// Lists
+// -------------------------------------
+
+ul[class],
+ol[class],
+dl,
+dd {
+  @include reset-to-0;
+}
+
+// Code
+// -------------------------------------
+
+code,
+pre {
+  @include reset-to-0;
+}
+
+// Table
+// -------------------------------------
+
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+caption {
+  @include reset-to-0;
+}
+
+// Form
+// -------------------------------------
+
+form,
+fieldset,
+legend {
+  @include reset-to-0;
+}
+
+// Figure
+// -------------------------------------
+
+figure,
+figcaption {
+  @include reset-to-0;
+}
+
+// Setup the body
+// =============================================================================
+
+body {
+  @include reset-to-0;
+
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.75;
+}
+
+// Make CTAs use pointer icon
+// =============================================================================
+
+[role='button'],
+button,
+label {
+  cursor: pointer;
+}
+
+// Remove spaces between table cells
+// =============================================================================
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}

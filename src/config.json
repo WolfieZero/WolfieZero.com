@@ -1,0 +1,43 @@
+{
+  "name": "Neil Sweeney",
+  "contentPerPage": 5,
+  "feedLength": 20,
+  "homepageFeedLength": 5,
+  "siteMeta": {
+    "title": "Neil Sweeney",
+    "siteUrl": "https://wolfiezero.com",
+    "description": "...",
+    "author": "Neil Sweeney",
+    "email": "neil@wolfiezero.com",
+    "avatarUrl": "https://www.gravatar.com/avatar/52c8f3855bd70cec14ec5a356308a0d4?s=256"
+  },
+  "display": {
+    "blog": false,
+    "nav": false
+  },
+  "social": {
+    "github": {
+      "username": "wolfiezero",
+      "url": "https://github.com/wolfiezero"
+    },
+    "instagram": {
+      "username": "wolfiezero",
+      "url": "https://instagram.com/wolfiezero"
+    },
+    "twitter": {
+      "username": "wolfiezero",
+      "url": "https://twitter.com/wolfiezero"
+    }
+  },
+  "language": "en-GB",
+  "navigationItems": [
+    {
+      "label": "Home",
+      "link": "/"
+    },
+    {
+      "label": "About",
+      "link": "/about"
+    }
+  ]
+}
