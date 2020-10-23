@@ -1,6 +1,14 @@
 {
   "name": "wolfiezero",
   "version": "0.1.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WolfieZero/wolfiezero.com.git"
+  },
+  "homepage": "https://github.com/WolfieZero/wolfiezero.com#readme",
+  "bugs": {
+    "url": "https://github.com/WolfieZero/wolfiezero.com/issues"
+  },
   "browserslist": [
     ">0.3%"
   ],
