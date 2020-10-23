@@ -21,6 +21,7 @@ export const Asset: React.FunctionComponent<AssetProps> = ({ name, size, link, .
   if (link) {
     return (
       <A href={link} className={styles.AssetLink} label={name}>
+        {name}
         <Component className={styles.Asset} style={style} {...props} />
       </A>
     );
