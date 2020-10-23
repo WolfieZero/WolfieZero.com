@@ -3,7 +3,6 @@ import { GetStaticProps } from 'next';
 
 import { Button, ButtonGroup } from 'components/button';
 import { ContentsList } from 'components/contents';
-// import { Hero, HeroIntro } from 'components/hero';
 import { NavigationItem } from 'components/navigation';
 import { PageHeader } from 'components/page-header';
 import { Section } from 'components/section';
