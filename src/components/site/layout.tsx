@@ -36,7 +36,7 @@ export const Layout = ({ children, navigationItems, title = '' }: Props): JSX.El
           <A href="https://vercel.com/" rel="external">
             Hosted at Vercel
           </A>
-          <A href="https://github.com/wolfiezero/wolfiezero" rel="external me">
+          <A href="https://github.com/wolfiezero/wolfiezero.com/" rel="external me">
             Source on Github
           </A>
         </p>
