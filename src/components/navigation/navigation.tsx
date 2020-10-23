@@ -27,7 +27,7 @@ export const Navigation: React.FC<NavigationProps> = ({ items }) => {
 
   return (
     <nav className={styles.Navigation}>
-      <a href="#nav:open" data-sctrack="hamburger" role="switch">
+      <a href="#nav:open" role="switch">
         <span className={styles.NavIcon} />
       </a>
       <span className={styles.NavTrigger} id="nav:open" />
@@ -37,7 +37,7 @@ export const Navigation: React.FC<NavigationProps> = ({ items }) => {
             ✕
           </a>
         </li>
-        {items.map(_navItems)}
+        {items.map(item => _navItems(item))}
       </ul>
     </nav>
   );

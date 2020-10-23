@@ -11,6 +11,7 @@
     @include list-basic;
     font-size: 1.3rem;
     backdrop-filter: blur(10px);
+    background: rgba($color-black, 0.8);
     text-align: center;
     display: none;
     flex-direction: column;
@@ -21,7 +22,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba($color-black, 0.5);
     margin: 0;
   }
 
