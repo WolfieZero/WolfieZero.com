@@ -9,7 +9,7 @@ import { Section } from 'components/section';
 import { Layout } from 'components/site';
 import { getContents, getNumberOfContents, Content, ContentName } from 'lib/contents';
 
-import { navigationItems, homepageFeedLength, display } from 'config.json';
+import { navigationItems, homepageFeedLength, display, siteMeta } from 'config.json';
 
 type HomeProps = {
   blog: Content[];
@@ -19,7 +19,7 @@ type HomeProps = {
 
 export const Home: React.FunctionComponent<HomeProps> = ({ blog, totalBlogs, ...props }) => {
   return (
-    <Layout {...props}>
+    <Layout {...props} title="" description={siteMeta.description}>
       <Hero modifiers={['moi']}>
         <HeroIntro />
       </Hero>
