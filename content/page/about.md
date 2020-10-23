@@ -2,6 +2,7 @@
 title: 'About'
 slug: about
 date: 2020/10/22 21:09
+description: 'Find out more about me... but you probably have better things to do'
 ---
 
 Another software engineer that does JavaScript development... yes, indeed. But I'm more than that.
