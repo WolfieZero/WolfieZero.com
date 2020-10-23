@@ -1,12 +1,12 @@
 import { classList } from 'helpers';
 import styles from './hero.module.scss';
 
-type HeroProp = {
+type HeroProps = {
   backgroundImage?: string;
   modifiers?: string[];
 };
 
-export const Hero: React.FunctionComponent<HeroProp> = ({ backgroundImage = '', modifiers = [], children }) => {
+export const Hero: React.FC<HeroProps> = ({ backgroundImage = '', modifiers = [], children }) => {
   let inlineStyle = {};
 
   if (backgroundImage) {

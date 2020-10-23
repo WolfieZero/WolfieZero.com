@@ -5,11 +5,11 @@ import { Content } from 'lib/contents';
 
 import styles from './contents.module.scss';
 
-interface IPropsContentsList {
+export interface ContentsListProps {
   items: Content[];
 }
 
-export const ContentsList = ({ items = [] }: IPropsContentsList): JSX.Element => {
+export const ContentsList: React.FC<ContentsListProps> = ({ items = [] }) => {
   return (
     <>
       <ul className={styles.List}>

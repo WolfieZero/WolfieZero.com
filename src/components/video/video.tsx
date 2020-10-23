@@ -4,9 +4,9 @@ import { regexYoutube } from 'lib/links';
 
 import styles from './video.module.scss';
 
-type VideoProps = {
+export interface VideoProps {
   url: string;
-};
+}
 
 const getYouTubeId = (url: string): string => {
   const split = url.match(regexYoutube);
@@ -18,7 +18,7 @@ const getYouTubeId = (url: string): string => {
   return '';
 };
 
-export const Video: React.FunctionComponent<VideoProps> = ({ url }) => {
+export const Video: React.FC<VideoProps> = ({ url }) => {
   const youtubeId = getYouTubeId(url);
 
   return (

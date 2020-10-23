@@ -6,11 +6,11 @@ import { NavigationItem } from './navigation.type';
 
 import styles from './navigation.module.scss';
 
-interface NavigationProps {
+export interface NavigationProps {
   items: NavigationItem[];
 }
 
-export const Navigation: React.FunctionComponent<NavigationProps> = ({ items }) => {
+export const Navigation: React.FC<NavigationProps> = ({ items }) => {
   if (!display.nav) {
     return <></>;
   }

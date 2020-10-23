@@ -2,10 +2,10 @@ import { classList } from 'helpers';
 
 import style from './button.module.scss';
 
-interface ButtonGroupProps {
+export interface ButtonGroupProps {
   className?: App.ClassName;
 }
 
-export const ButtonGroup: React.FunctionComponent<ButtonGroupProps> = ({ children, className }) => {
-  return <div className={classList([style.ButtonGroup, className])}>{children}</div>;
-};
+export const ButtonGroup: React.FC<ButtonGroupProps> = ({ children, className }) => (
+  <div className={classList([style.ButtonGroup, className])}>{children}</div>
+);

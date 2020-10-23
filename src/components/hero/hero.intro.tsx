@@ -3,7 +3,7 @@ import { social } from 'config.json';
 
 import styles from './hero.module.scss';
 
-export const HeroIntro: React.FunctionComponent = () => {
+export const HeroIntro: React.FC = () => {
   const iconSize = '4rem';
 
   return (

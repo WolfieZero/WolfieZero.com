@@ -8,7 +8,7 @@ import { A } from 'elements';
 
 import styles from './site.module.scss';
 
-interface LayoutProps {
+export interface LayoutProps {
   children: React.ReactNode;
   navigationItems: NavigationItem[];
   title: string;

@@ -6,6 +6,6 @@ interface {{ pascalCase componentName }}Props {
   children: React.ReactNode;
 }
 
-export const {{ pascalCase componentName }}: React.FunctionComponent<{{ pascalCase componentName }}Props> = ({ children }) => {
+export const {{ pascalCase componentName }}: React.FC<{{ pascalCase componentName }}Props> = ({ children }) => {
   return <>{children}</>;
 };

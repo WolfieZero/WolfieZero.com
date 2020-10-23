@@ -3,7 +3,7 @@ import { LogoStar } from './star.logo';
 import { LogoText } from './text.logo';
 import styles from './logo.module.scss';
 
-export const Logo = (): JSX.Element => {
+export const Logo: React.FC = () => {
   return (
     <div className={styles.Logo}>
       <LogoStar className={styles.Logo__star} />

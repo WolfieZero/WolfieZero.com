@@ -3,15 +3,21 @@ import { A } from 'elements';
 import * as IconsAssets from './svgs';
 import styles from './asset.module.scss';
 
-type AssetProps = {
+export interface AssetProps {
   name: Icons;
   className?: App.ClassName;
   link?: string;
   size?: string;
-};
+}
 
-export const Asset: React.FunctionComponent<AssetProps> = ({ name, size, link, ...props }) => {
-  const Component: React.FunctionComponent<App.ExtendedProps> = IconsAssets[name];
+export enum Icons {
+  instagram = 'Instagram',
+  github = 'Github',
+  twitter = 'Twitter',
+}
+
+export const Asset: React.FC<AssetProps> = ({ name, size, link, ...props }) => {
+  const Component: React.FC<App.ExtendedProps> = IconsAssets[name];
 
   const style: React.CSSProperties = {
     width: size,
@@ -29,9 +35,3 @@ export const Asset: React.FunctionComponent<AssetProps> = ({ name, size, link, .
 
   return <Component className={styles.Asset} style={style} {...props} />;
 };
-
-export enum Icons {
-  instagram = 'Instagram',
-  github = 'Github',
-  twitter = 'Twitter',
-}

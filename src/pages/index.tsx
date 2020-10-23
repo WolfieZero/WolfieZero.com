@@ -11,13 +11,13 @@ import { getContents, getNumberOfContents, Content, ContentName } from 'lib/cont
 
 import { navigationItems, homepageFeedLength, display, siteMeta } from 'config.json';
 
-type HomeProps = {
+export interface HomeProps {
   blog: Content[];
   navigationItems: NavigationItem[];
   totalBlogs: number;
-};
+}
 
-export const Home: React.FunctionComponent<HomeProps> = ({ blog, totalBlogs, ...props }) => {
+const Home: React.FC<HomeProps> = ({ blog, totalBlogs, ...props }) => {
   return (
     <Layout {...props} title="" description={siteMeta.description}>
       <Hero modifiers={['moi']}>

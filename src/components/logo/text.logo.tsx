@@ -4,10 +4,10 @@ import { classList } from 'helpers';
 
 import styles from './logo.module.scss';
 
-interface Props {
+export interface LogoTextProps {
   className: string;
 }
 
-export const LogoText = ({ className }: Props): JSX.Element => (
+export const LogoText: React.FC<LogoTextProps> = ({ className }) => (
   <p className={classList([styles.LogoText, className])}>Neil Sweeney</p>
 );

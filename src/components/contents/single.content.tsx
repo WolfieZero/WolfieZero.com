@@ -8,15 +8,17 @@ import { Section } from 'components/section';
 
 import styles from './contents.module.scss';
 
-interface SingleContent extends Content {
+export interface HeaderProps {
+  title: string;
+  date?: string;
   useHero?: boolean;
 }
 
-const Header: React.FunctionComponent<{ title: string; date?: string; useHero?: boolean }> = ({
-  title,
-  date = '',
-  useHero = false,
-}) => {
+export interface SingleContentProps extends Content {
+  useHero?: boolean;
+}
+
+const Header: React.FC<HeaderProps> = ({ title, date = '', useHero = false }) => {
   if (useHero) {
     return (
       <Hero>
@@ -28,7 +30,7 @@ const Header: React.FunctionComponent<{ title: string; date?: string; useHero?: 
   return <h1 className={styles.SingleHeader__title}>{title}</h1>;
 };
 
-export const SingleContent: React.FunctionComponent<SingleContent> = ({
+export const SingleContent: React.FC<SingleContentProps> = ({
   title,
   body,
   date = '',

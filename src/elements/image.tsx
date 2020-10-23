@@ -1,8 +1,8 @@
-type ImageProps = {
+export interface ImageProps {
   src: string;
   alt: string;
-};
+}
 
-export const Image: React.FunctionComponent<ImageProps> = ({ src, alt = '', ...props }) => {
+export const Image: React.FC<ImageProps> = ({ src, alt = '', ...props }) => {
   return <img src={src} loading="lazy" alt={alt} {...props} />;
 };

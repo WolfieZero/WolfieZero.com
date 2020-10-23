@@ -13,7 +13,7 @@ import { getContents, Content, ContentName } from 'lib/contents';
 
 import { navigationItems, contentPerPage } from 'config.json';
 
-interface BlogProps {
+export interface BlogProps {
   blog: Content[];
   navigationItems: NavigationItem[];
 }

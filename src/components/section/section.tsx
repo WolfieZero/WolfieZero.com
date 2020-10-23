@@ -1,10 +1,10 @@
 import style from './section.module.scss';
 
-export type SectionProps = {
+export interface SectionProps {
   make: 'wide' | 'narrow' | 'readable' | 'contained';
-};
+}
 
-export const Section: React.FunctionComponent<SectionProps> = ({ children, make = 'contained' }) => {
+export const Section: React.FC<SectionProps> = ({ children, make = 'contained' }) => {
   const classNames: string[] = [style.Section];
 
   switch (make) {

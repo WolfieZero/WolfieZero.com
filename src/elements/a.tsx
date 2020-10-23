@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Link } from 'framework';
 
-interface Props {
+export interface AProps {
   children: React.ReactNode;
   href: string;
   label?: string;
@@ -11,7 +11,7 @@ interface Props {
   role?: string;
 }
 
-export const A = ({ children, className, rel, label, role = 'link', ...props }: Props): JSX.Element => {
+export const A: React.FC<AProps> = ({ children, className, rel, label, role = 'link', ...props }) => {
   if (props.href.startsWith('http')) {
     return (
       <a {...props} aira-label={label} aira-role={role} className={className} rel={rel}>

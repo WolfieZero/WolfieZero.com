@@ -4,11 +4,11 @@ import { ButtonGroup, Button } from 'components/button';
 import { Video } from 'components/video';
 import { getLinkName, LinkName } from 'lib/links';
 
-type MetaLinkProps = {
+export interface MetaLinkProps {
   url: string;
-};
+}
 
-export const MetaLink: React.FunctionComponent<MetaLinkProps> = ({ url }) => {
+export const MetaLink: React.FC<MetaLinkProps> = ({ url }) => {
   switch (getLinkName(url)) {
     case LinkName.Youtube:
       return <Video url={url} />;

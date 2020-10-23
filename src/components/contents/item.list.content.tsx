@@ -5,7 +5,9 @@ import { Content } from 'lib/contents';
 
 import style from './contents.module.scss';
 
-export const ContentListItem = ({ title, type, path, blurb = '', metaLink = '#' }: Content): JSX.Element => {
+type ContentListItemProps = Content;
+
+export const ContentListItem: React.FC<ContentListItemProps> = ({ title, type, path, blurb = '', metaLink = '#' }) => {
   let icon = '𝍌';
   let link = path;
 
