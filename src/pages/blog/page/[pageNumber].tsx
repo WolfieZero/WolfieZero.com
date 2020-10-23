@@ -19,20 +19,15 @@ type BlogPostProps = {
   numberOfContentPages: number;
 };
 
-const PageNumber: React.FunctionComponent<BlogPostProps> = ({
-  content,
-  currentPageNumber,
-  numberOfContentPages,
-  ...props
-}) => {
+const PageNumber: React.FC<BlogPostProps> = ({ content, currentPageNumber, numberOfContentPages, ...props }) => {
   const nextPageNumber = currentPageNumber + 1;
   const previousPageNumber = currentPageNumber - 1;
-  console.log({ previousPageNumber });
+
   return (
-    <Layout {...props}>
+    <Layout {...props} title={`Blog (page ${currentPageNumber})`} description="Archive of blog posts">
       <PageHeader>
         <Container>
-          <h1>Archive of Blog Posts</h1>
+          <h1>Blog</h1>
         </Container>
       </PageHeader>
       <Section make="narrow">
@@ -62,7 +57,7 @@ const PageNumber: React.FunctionComponent<BlogPostProps> = ({
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const contentGroup = ContentName.blog;
   const numberOfContentPages: number = getNumberOfContentPages(contentGroup, contentPerPage);
-  const currentPageNumber: number = parseInt((params?.pageNumber || '').toString(), 10);
+  const currentPageNumber: number = Number.parseInt((params?.pageNumber || '').toString(), 10);
   const startIndex: number = (currentPageNumber - 1) * contentPerPage;
   const content = getContents(contentGroup, contentPerPage, startIndex);
 

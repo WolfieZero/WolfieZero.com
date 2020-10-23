@@ -13,9 +13,9 @@ type BlogPostProps = {
   navigationItems: NavigationItem[];
 };
 
-const BlogPost: React.FunctionComponent<BlogPostProps> = ({ content, ...props }) => {
+const BlogPost: React.FC<BlogPostProps> = ({ content, ...props }) => {
   return (
-    <Layout {...props}>
+    <Layout {...props} title={content.title} description={content.description}>
       <SingleContent {...content} useHero={true} />
     </Layout>
   );

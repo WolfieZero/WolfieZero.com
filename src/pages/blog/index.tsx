@@ -13,17 +13,17 @@ import { getContents, Content, ContentName } from 'lib/contents';
 
 import { navigationItems, contentPerPage } from 'config.json';
 
-interface IPropsBlog {
+interface BlogProps {
   blog: Content[];
   navigationItems: NavigationItem[];
 }
 
-const Blog = ({ blog, ...props }: IPropsBlog): JSX.Element => {
+const Blog: React.FC<BlogProps> = ({ blog, ...props }) => {
   return (
-    <Layout {...props}>
+    <Layout {...props} title="Blog" description="Archive of blog posts">
       <PageHeader>
         <Container>
-          <h1>Archive of Blog Posts</h1>
+          <h1>Blog</h1>
         </Container>
       </PageHeader>
       <Section make="narrow">

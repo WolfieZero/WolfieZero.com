@@ -13,9 +13,9 @@ type PageProps = {
   navigationItems: NavigationItem[];
 };
 
-const Page: React.FunctionComponent<PageProps> = ({ content, ...props }) => {
+const Page: React.FC<PageProps> = ({ content, ...props }) => {
   return (
-    <Layout {...props}>
+    <Layout {...props} title={content.title} description={content.description}>
       <SingleContent {...content} />
     </Layout>
   );

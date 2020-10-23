@@ -11,6 +11,7 @@ export interface Content {
   path: string;
   date: string;
 
+  description?: string;
   blurb?: string;
   excerpt?: string;
   metaLink?: string;
