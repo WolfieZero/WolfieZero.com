@@ -46,11 +46,6 @@ export const Layout: React.FC<LayoutProps> = ({ children, navigationItems, title
         </p>
         <p>Copyright 2020</p>
       </footer>
-      <script
-        src="//instant.page/5.0.1"
-        type="module"
-        integrity="sha384-0DvoZ9kNcB36fWcQApIMIGQoTzoBDYTQ85e8nmsfFOGz4RHAdUhADqJt4k3K2uLS"
-      />
     </div>
   );
 };
