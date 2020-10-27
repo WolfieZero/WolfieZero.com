@@ -3,8 +3,8 @@ import React from 'react';
 import { Navigation, NavigationItem } from 'components/navigation';
 import { Logo, LogoStar } from 'components/logo';
 import { seoTitle } from 'helpers';
-import { Head } from 'framework';
 import { A } from 'elements';
+import Head from 'next/head';
 
 import styles from './site.module.scss';
 

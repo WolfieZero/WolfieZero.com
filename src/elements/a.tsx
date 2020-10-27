@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Link } from 'framework';
+import NextLink from 'next/link';
 
 export interface AProps {
   children: React.ReactNode;
@@ -20,10 +20,10 @@ export const A: React.FC<AProps> = ({ children, className, rel, label, role = 'l
     );
   }
   return (
-    <Link {...props}>
+    <NextLink {...props}>
       <a className={className} aira-label={label} aira-role={role} data-location="internal">
         {children}
       </a>
-    </Link>
+    </NextLink>
   );
 };
