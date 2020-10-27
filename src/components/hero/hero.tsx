@@ -3,25 +3,23 @@ import styles from './hero.module.scss';
 
 type HeroProps = {
   backgroundImage?: string;
+  backgroundAlt?: string;
   modifiers?: string[];
 };
 
-export const Hero: React.FC<HeroProps> = ({ backgroundImage = '', modifiers = [], children }) => {
-  let inlineStyle = {};
-
-  if (backgroundImage) {
-    inlineStyle = {
-      backgroundImage: `url(${backgroundImage})`,
-    };
+export const Hero: React.FC<HeroProps> = ({ backgroundImage = '', backgroundAlt = '', modifiers = [], children }) => {
+  if (backgroundImage && backgroundAlt) {
+    children = (
+      <>
+        <img src={backgroundImage} alt={backgroundAlt} className={styles['Hero__background-image']} />
+        {children}
+      </>
+    );
   }
 
   modifiers = modifiers.map(modifier => {
-    return styles['Hero__m_' + modifier];
+    return styles[`Hero--${modifier}`];
   });
 
-  return (
-    <div className={classList([styles.Hero, modifiers])} style={inlineStyle}>
-      {children}
-    </div>
-  );
+  return <div className={classList([styles.Hero, modifiers])}>{children}</div>;
 };

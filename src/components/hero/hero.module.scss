@@ -19,15 +19,19 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: radial-gradient(100% 256% at 100% 0%, rgba(131, 28, 133, 0.7) 0%, rgba(#010101, 0.85) 100%);
+    background-image: radial-gradient(100% 256% at 100% 0%, $color-brand 0%, $color-black 100%);
     z-index: 0;
   }
 
-  &__m_moi {
-    background-image: url('/assets/me-desk.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  &__background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+    opacity: 0.1;
   }
 }
 

@@ -20,7 +20,7 @@ export interface HomeProps {
 const Home: React.FC<HomeProps> = ({ blog, totalBlogs, ...props }) => {
   return (
     <Layout {...props} title="" description={siteMeta.description}>
-      <Hero modifiers={['moi']}>
+      <Hero backgroundImage={require('../../content/page/home/me-desk.jpg')} backgroundAlt="Me sat at my desk">
         <HeroIntro />
       </Hero>
       <Section make="narrow">
